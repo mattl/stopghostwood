@@ -1,0 +1,37 @@
+<div class="row">
+<div class="col-md-4">
+
+<h3>Recent episodes</h3>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+</div>
+<div class="col-md-4">
+
+
+  {% include list.html %}
+
+
+</div>
+<div class="col-md-4">
+
+<h3>Follow us on social media</h3>
+
+<ul>
+<li>Twitter: </li>
+<li>Pump.io: </li>
+<li>GNU social: </li>
+</ul>
+
+</div>
